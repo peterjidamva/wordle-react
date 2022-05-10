@@ -8,19 +8,25 @@ export const AppContext = createContext();
 
 function App() {
 
-  const [wordleBody, setWordleBody] = useState(WordleBodyDefault);
+  const [board, setWordleBody] = useState(WordleBodyDefault);
 
   return (
     <div className="App">
       <nav>
        SWAHILI WORDLE 
       </nav>
-      <AppContext.Provider value ={{wordleBody,setWordleBody}}>
+      <AppContext.Provider value ={{board,setWordleBody}}>
+      {/* <div className='game'> */}
       <WordleBody/>
       <Keyboard/>
-      </AppContext.Provider>
+      {/* </div>         */}
+     </AppContext.Provider>
     </div>
   );
 }
 
 export default App;
+
+
+
+

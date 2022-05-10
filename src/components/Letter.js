@@ -1,15 +1,15 @@
 import React,{useContext} from 'react'
-
 import { AppContext } from '../App'
 import {WordleBodyDefault} from '../words'
 
+
 function Letter(LetterPosition , attemptV) {
+  const {board} = useContext(AppContext)
 
-  const {wordleBody} = useContext(AppContext)
+  const letter = board[[attemptV][LetterPosition]];
+  // console.log(LetterPosition)
 
-  const letter = WordleBodyDefault[[attemptV][LetterPosition]]
-  console.log(LetterPosition)
-  // console.log(WordleBodyDefault[0][1]);
+  console.log(WordleBodyDefault[[attemptV][LetterPosition]])
 
   return (
     
